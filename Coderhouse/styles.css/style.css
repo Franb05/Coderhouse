@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ===== ESTILOS GENERALES ===== */
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #111111;
+    color: #dcdedf;
+    font-size: 1rem;
+}
+
+/* ===== HEADER ===== */
+
+header {
+    background-color: #0f1924;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/* ===== NAVEGACIÓN ===== */
+
+.nav_ul li {
+    list-style: none;
+}
+
+.nav_ul a {
+    text-decoration: none;
+    color: #dcdedf;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+
+main {
+    background-color: #171344;
+}
+
+main h2 {
+    font-size: 2rem;
+    font-weight: 550;
+}
+
+main h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* ===== IMÁGENES ===== */
+
+img {
+    width: 500px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    background-color: #0f1924;
+}
+
+.footer_content a {
+    text-decoration: none;
+    color: #dcdedf;
+}
+
+footer h4 {
+    font-size: 1.25rem;
+    font-weight: 450;
+}
