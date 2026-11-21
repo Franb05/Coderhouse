@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+   BASE MOBILE-FIRST
+   Diseño para celular: secciones apiladas al 100% del ancho.
+   Bootstrap se carga antes que este archivo, asi que los estilos
+   propios tienen prioridad y mantienen la identidad del sitio.
+*/
+
+:root {
+    --color-acento: #6f8cff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Bootstrap agrega margenes a estos elementos por defecto (Bootstrap docs: Content > Reboot).
+   Se vuelven a 0 para que el espaciado lo controle el gap de las grillas propias */
+h1, h2, h3, h4, p, figure {
+    margin: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #111111;
+    color: #dcdedf;
+    font-size: 1rem;
+}
+
+/* HEADER Y NAVBAR DE BOOTSTRAP */
+
+header {
+    background-color: #0f1924;
+    padding: 10px 20px;
+}
+
+.titulo {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.nav_enlace {
+    color: #dcdedf;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav_toggler {
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+/* Enlace de la pagina actual: clase propia en lugar de .active de Bootstrap,
+   porque .active tiene mas prioridad y no dejaba que funcione :hover  */
+.nav_actual {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* ESTADOS INTERACTIVOS: NAVBAR (orden LVHA) */
+
+/*:focus-visible muestra el borde solo al navegar con teclado (tecla Tab).
+   Se usa en lugar de :focus para que no quede el borde al hacer clic con el mouse (MDN: :focus-visible)*/
+.nav_enlace:hover,
+.nav_enlace:focus-visible {
+    color: var(--color-acento);
+}
+
+.nav_enlace:focus-visible {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 3px;
+}
+
+.nav_enlace:active {
+    color: #ffffff;
+    transform: scale(0.95);
+}
+
+.nav_toggler:hover,
+.nav_toggler:focus-visible {
+    border-color: var(--color-acento);
+}
+
+.nav_toggler:active {
+    transform: scale(0.92);
+}
+
+/* CONTENIDO PRINCIPAL (Flexbox) */
+
+main {
+    background-color: #171344;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+main section {
+    background-color: #0f1924;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 20px;
+}
+
+.titulo_seccion {
+    font-size: 1.7rem;
+    font-weight: 550;
+}
+
+.subtitulo_seccion {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* IMAGENES */
+
+img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* INTRO DE PAGINA (Grid con areas)
+   Primera seccion de catalogo, nosotros, contacto y soporte */
+
+.intro_pagina {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "titulo"
+        "texto"
+        "imagen";
+    gap: 20px;
+}
+
+.intro_pagina .titulo_seccion {
+    grid-area: titulo;
+}
+
+.intro_texto {
+    grid-area: texto;
+}
+
+.intro_imagen {
+    grid-area: imagen;
+}
+
+/* CATEGORIAS - index (Grid con areas) */
+
+.categorias {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "titulo"
+        "descripcion"
+        "videojuegos"
+        "consolas"
+        "accesorios";
+    gap: 20px;
+}
+
+.categorias .titulo_seccion {
+    grid-area: titulo;
+}
+
+.categorias_descripcion {
+    grid-area: descripcion;
+}
+
+.categoria_videojuegos {
+    grid-area: videojuegos;
+}
+
+.categoria_consolas {
+    grid-area: consolas;
+}
+
+.categoria_accesorios {
+    grid-area: accesorios;
+}
+
+.categoria_videojuegos,
+.categoria_consolas,
+.categoria_accesorios {
+    background-color: #0f1924;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* PRODUCTOS DESTACADOS - index (Grid con areas) */
+
+.productos_destacados {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "titulo"
+        "descripcion"
+        "ps5"
+        "switch"
+        "auriculares";
+    gap: 20px;
+}
+
+.productos_destacados .titulo_seccion {
+    grid-area: titulo;
+}
+
+.productos_descripcion {
+    grid-area: descripcion;
+}
+
+.producto_ps5 {
+    grid-area: ps5;
+}
+
+.producto_switch {
+    grid-area: switch;
+}
+
+.producto_auriculares {
+    grid-area: auriculares;
+}
+
+.producto_ps5,
+.producto_switch,
+.producto_auriculares {
+    background-color: #0f1924;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* CATALOGO (Grid) */
+
+.catalogo_grupo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.catalogo_grupo .titulo_seccion,
+.grupo_descripcion {
+    grid-column: 1 / -1;
+}
+
+.catalogo_grupo article {
+    background-color: #172433;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ESTADOS INTERACTIVOS: TARJETAS (index y catalogo) */
+
+.categoria_videojuegos,
+.categoria_consolas,
+.categoria_accesorios,
+.producto_ps5,
+.producto_switch,
+.producto_auriculares,
+.catalogo_grupo article {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.categoria_videojuegos:hover,
+.categoria_consolas:hover,
+.categoria_accesorios:hover,
+.producto_ps5:hover,
+.producto_switch:hover,
+.producto_auriculares:hover,
+.catalogo_grupo article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.categoria_videojuegos:active,
+.categoria_consolas:active,
+.categoria_accesorios:active,
+.producto_ps5:active,
+.producto_switch:active,
+.producto_auriculares:active,
+.catalogo_grupo article:active {
+    transform: translateY(-2px);
+}
+
+/* BENEFICIOS (index) */
+
+.beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* GALERIA - CAROUSEL DE BOOTSTRAP (index y catalogo) */
+/* max-width evita que el carousel se estire demasiado en pantallas grandes*/
+
+.galeria_carousel {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/*aspect-ratio + object-fit: todas las imagenes del carousel tienen el mismo tamano,
+   aunque las fotos originales sean distintas (MDN: aspect-ratio y object-fit) */
+   
+.galeria_img {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.galeria_caption {
+    background-color: rgba(15, 25, 36, 0.8);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* PREGUNTAS FRECUENTES - ACORDEON DE BOOTSTRAP (index)
+   Se personalizan las variables CSS del acordeon (Bootstrap docs: Components > Accordion > CSS variables)
+   para usar la paleta propia, sin modificar los archivos de Bootstrap */
+
+.faq_acordeon {
+    --bs-accordion-bg: #172433;
+    --bs-accordion-color: #dcdedf;
+    --bs-accordion-border-color: #2a3a4d;
+    --bs-accordion-btn-color: #dcdedf;
+    --bs-accordion-btn-bg: #172433;
+    --bs-accordion-active-color: #ffffff;
+    --bs-accordion-active-bg: #171344;
+    --bs-accordion-btn-focus-border-color: var(--color-acento);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 3px rgba(111, 140, 255, 0.35);
+}
+
+.faq_boton {
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.faq_boton:hover,
+.faq_boton:focus-visible {
+    background-color: #1d2f44;
+    color: #ffffff;
+}
+
+.faq_boton:active {
+    transform: scale(0.99);
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #0f1924;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer_content a {
+    text-decoration: none;
+    color: #dcdedf;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.titulo_redes {
+    font-size: 1.25rem;
+    font-weight: 450;
+}
+
+/* ESTADOS INTERACTIVOS: ENLACES DEL FOOTER (orden LVHA) */
+
+.footer_content a:hover,
+.footer_content a:focus-visible {
+    color: var(--color-acento);
+}
+
+.footer_content a:focus-visible {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 3px;
+}
+
+.footer_content a:active {
+    color: #ffffff;
+    transform: scale(0.95);
+}
+
+
+/*
+   TABLET (desde 768px)
+   Grillas de 2 columnas
+*/
+
+@media (min-width: 768px) {
+
+    .categorias {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "titulo titulo"
+            "descripcion descripcion"
+            "videojuegos consolas"
+            "accesorios accesorios";
+    }
+
+    .productos_destacados {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "titulo titulo"
+            "descripcion descripcion"
+            "ps5 switch"
+            "auriculares auriculares";
+    }
+
+    .catalogo_grupo {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/*
+   DESKTOP (desde 1024px)
+   El layout pasa de 1 columna a multiples columnas
+*/
+
+@media (min-width: 1024px) {
+
+    header {
+        padding: 16px 48px;
+    }
+
+    .intro_pagina {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "titulo imagen"
+            "texto imagen";
+        align-items: center;
+    }
+
+    .categorias {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "titulo titulo titulo"
+            "descripcion descripcion descripcion"
+            "videojuegos consolas accesorios";
+        gap: 25px;
+    }
+
+    .productos_destacados {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "titulo titulo titulo"
+            "descripcion descripcion descripcion"
+            "ps5 switch auriculares";
+        gap: 25px;
+    }
+
+    .catalogo_grupo {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 25px;
+    }
+
+    .catalogo_consolas {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 32px 48px;
+    }
+
+    .footer_content {
+        flex-direction: row;
+        gap: 20px;
+    }
+}

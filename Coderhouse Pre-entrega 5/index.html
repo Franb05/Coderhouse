@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Inicio | FB Game Store</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- data-bs-theme="dark": le indica a Bootstrap que el fondo es oscuro,
+     asi la hamburguesa y los textos se ven claros (Bootstrap docs: Customize > Color modes) -->
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container-fluid">
+                <h1 class="navbar-brand titulo">FB Game Store</h1>
+
+                <button class="navbar-toggler nav_toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false"
+                    aria-label="Abrir menu de navegacion">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link nav_enlace nav_actual" aria-current="page" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link nav_enlace" href="pages/catalogo.html">Catalogo</a></li>
+                        <li class="nav-item"><a class="nav-link nav_enlace" href="pages/soporte.html">Soporte</a></li>
+                        <li class="nav-item"><a class="nav-link nav_enlace" href="pages/nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link nav_enlace" href="pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="inicio">
+            <h2 class="titulo_seccion">Inicio</h2>
+
+            <figure>
+                <img src="img/FB_store.png" alt="Imagen Logo de FB Game Store">
+                <figcaption>Identidad visual de FB Game Store.</figcaption>
+            </figure>
+
+            <p>
+                Bienvenido a FB Game Store, tu tienda de videojuegos y productos
+                para disfrutar al maximo de tu experiencia gamer.
+            </p>
+
+            <p>
+                Encontra videojuegos, consolas y accesorios para diferentes
+                plataformas y descubri nuevas opciones para disfrutar de tus
+                juegos favoritos.
+            </p>
+        </section>
+
+
+        <section class="galeria">
+            <h2 class="titulo_seccion">Galeria</h2>
+
+            <div id="carouselGaleria" class="carousel slide galeria_carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+                    <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+                    <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
+                    <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="3" aria-label="Diapositiva 4"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/Videojuegos.jpeg" class="d-block w-100 galeria_img" alt="Videojuegos disponibles en FB Game Store">
+                        <div class="carousel-caption d-none d-md-block galeria_caption">
+                            <h3 class="subtitulo_seccion">Videojuegos</h3>
+                            <p>Titulos de distintos generos para diferentes plataformas.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Consolas.jpeg" class="d-block w-100 galeria_img" alt="Consolas disponibles en FB Game Store">
+                        <div class="carousel-caption d-none d-md-block galeria_caption">
+                            <h3 class="subtitulo_seccion">Consolas</h3>
+                            <p>Elegi la plataforma que mejor se adapte a tu forma de jugar.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Accesorios.jpeg" class="d-block w-100 galeria_img" alt="Accesorios para gamers disponibles en FB Game Store">
+                        <div class="carousel-caption d-none d-md-block galeria_caption">
+                            <h3 class="subtitulo_seccion">Accesorios</h3>
+                            <p>Auriculares, controles, teclados y mouse para gamers.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/XboxSeriesX.jpg" class="d-block w-100 galeria_img" alt="Consola Xbox Series X">
+                        <div class="carousel-caption d-none d-md-block galeria_caption">
+                            <h3 class="subtitulo_seccion">Xbox Series X</h3>
+                            <p>Consola de alto rendimiento para una amplia variedad de videojuegos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaleria" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselGaleria" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
+
+        <section class="categorias">
+            <h2 class="titulo_seccion">Categorias</h2>
+
+            <p class="categorias_descripcion">
+                Explora nuestras principales categorias y encontra productos
+                pensados para diferentes tipos de jugadores y plataformas.
+            </p>
+
+            <article class="categoria_videojuegos">
+                <h3 class="subtitulo_seccion">Videojuegos</h3>
+
+                <figure>
+                    <img src="img/Videojuegos.jpeg" alt="Videojuegos disponibles en FB Game Store">
+                    <figcaption>Videojuegos para diferentes plataformas.</figcaption>
+                </figure>
+
+                <p>
+                    Descubri juegos de distintos generos y para diferentes plataformas,
+                    desde grandes lanzamientos hasta titulos para disfrutar con amigos.
+                </p>
+            </article>
+
+            <article class="categoria_consolas">
+                <h3 class="subtitulo_seccion">Consolas</h3>
+
+                <figure>
+                    <img src="img/Consolas.jpeg" alt="Consolas disponibles en FB Game Store">
+                    <figcaption>Consolas disponibles en FB Game Store.</figcaption>
+                </figure>
+
+                <p>
+                    Conoce nuestras opciones de consolas y elegi la plataforma que
+                    mejor se adapte a tus preferencias de juego.
+                </p>
+            </article>
+
+            <article class="categoria_accesorios">
+                <h3 class="subtitulo_seccion">Accesorios</h3>
+
+                <figure>
+                    <img src="img/Accesorios.jpeg" alt="Accesorios para gamers disponibles en FB Game Store">
+                    <figcaption>Accesorios para mejorar tu experiencia gamer.</figcaption>
+                </figure>
+
+                <p>
+                    Complementa tu experiencia con auriculares, controles, teclados,
+                    mouse y otros accesorios para gamers.
+                </p>
+            </article>
+        </section>
+
+
+        <section class="productos_destacados">
+            <h2 class="titulo_seccion">Productos destacados</h2>
+
+            <p class="productos_descripcion">
+                Conoce algunos de los productos destacados de nuestro catalogo.
+                Para consultar todas las opciones disponibles, visita nuestra
+                seccion de catalogo.
+            </p>
+
+            <article class="producto_ps5">
+                <h3 class="subtitulo_seccion">PlayStation 5</h3>
+
+                <figure>
+                    <img src="img/PS5.jpg" alt="Consola PlayStation 5">
+                    <figcaption>PlayStation 5.</figcaption>
+                </figure>
+
+                <p>
+                    Consola de nueva generacion para disfrutar de una amplia variedad
+                    de videojuegos y experiencias interactivas.
+                </p>
+            </article>
+
+            <article class="producto_switch">
+                <h3 class="subtitulo_seccion">Nintendo Switch</h3>
+
+                <figure>
+                    <img src="img/NintendoSwitch.jpeg" alt="Consola Nintendo Switch">
+                    <figcaption>Nintendo Switch.</figcaption>
+                </figure>
+
+                <p>
+                    Una consola versatil que permite disfrutar de videojuegos tanto
+                    en casa como en modo portatil.
+                </p>
+            </article>
+
+            <article class="producto_auriculares">
+                <h3 class="subtitulo_seccion">Auriculares Gamer</h3>
+
+                <figure>
+                    <img src="img/Auriculares.jpg" alt="Auriculares gamer">
+                    <figcaption>Auriculares gamer.</figcaption>
+                </figure>
+
+                <p>
+                    Auriculares pensados para mejorar la experiencia de juego y
+                    disfrutar de un sonido mas inmersivo.
+                </p>
+            </article>
+        </section>
+
+        <section  class="beneficios">
+            <h2 class="titulo_seccion">Por que elegir FB Game Store?</h2>
+
+            <p>
+                Buscamos ofrecer una experiencia sencilla para que puedas
+                encontrar productos relacionados con videojuegos y tecnologia
+                en un solo lugar.
+            </p>
+
+            <ul>
+                <li>Amplio catalogo de videojuegos.</li>
+                <li>Productos para diferentes plataformas.</li>
+                <li>Consolas y accesorios para gamers.</li>
+                <li>Variedad de opciones para diferentes jugadores.</li>
+                <li>Atencion y soporte para nuestros clientes.</li>
+            </ul>
+        </section>
+
+    <section class="preguntas">
+            <h2 class="titulo_seccion">Preguntas frecuentes</h2>
+
+            <div class="accordion faq_acordeon" id="faqAcordeon" data-bs-theme="dark">
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button faq_boton" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqUno" aria-expanded="true" aria-controls="faqUno">
+                            Que productos puedo encontrar?
+                        </button>
+                    </h3>
+                    <div id="faqUno" class="accordion-collapse collapse show" data-bs-parent="#faqAcordeon">
+                        <div class="accordion-body">
+                            Videojuegos, consolas y accesorios para diferentes plataformas.
+                            Podes ver todas las opciones en la seccion de Catalogo.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed faq_boton" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqDos" aria-expanded="false" aria-controls="faqDos">
+                            Como hago una consulta?
+                        </button>
+                    </h3>
+                    <div id="faqDos" class="accordion-collapse collapse" data-bs-parent="#faqAcordeon">
+                        <div class="accordion-body">
+                            Podes escribirnos desde la seccion de Contacto para consultar sobre
+                            nuestros productos o pedir informacion antes de comprar.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed faq_boton" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqTres" aria-expanded="false" aria-controls="faqTres">
+                            Tienen soporte para mis compras?
+                        </button>
+                    </h3>
+                    <div id="faqTres" class="accordion-collapse collapse" data-bs-parent="#faqAcordeon">
+                        <div class="accordion-body">
+                            Si, en la seccion de Soporte encontras ayuda sobre pedidos,
+                            medios de pago, cambios y devoluciones.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FB Game Store. Todos los derechos reservados.</p>
+
+        <div class="footer_content">
+            <h4 class="titulo_redes">Encontranos en</h4>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

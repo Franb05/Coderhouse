@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Catalogo | FB Game Store</title>
+</head>
+
+<body>
+    <header>
+        <!-- data-bs-theme="dark": le indica a Bootstrap que el fondo es oscuro,
+     asi la hamburguesa y los textos se ven claros (Bootstrap docs: Customize > Color modes) -->
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container-fluid">
+                <h1 class="navbar-brand titulo">FB Game Store</h1>
+
+                <button class="navbar-toggler nav_toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false"
+                    aria-label="Abrir menu de navegacion">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link nav_enlace" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link nav_enlace nav_actual" aria-current="page" href="#">Catalogo</a></li>
+                        <li class="nav-item"><a class="nav-link nav_enlace" href="soporte.html">Soporte</a></li>
+                        <li class="nav-item"><a class="nav-link nav_enlace" href="nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link nav_enlace" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="intro_pagina">
+
+            <h2 class="titulo_seccion">Catalogo</h2>
+
+            <p class="intro_texto">
+                En FB Game Store encontra una amplia variedad de productos relacionados
+                con los videojuegos y la tecnologia. Explora nuestro catalogo y descubri
+                opciones para diferentes plataformas, estilos de juego y preferencias.
+            </p>
+
+            <figure class="intro_imagen">
+                <img src="../img/FB_catalogo.png" alt="Imagen del catalogo de FB Game Store">
+                <figcaption>Catalogo de productos de FB Game Store.</figcaption>
+            </figure>
+
+        </section>
+
+
+        <section class="galeria">
+            <h2 class="titulo_seccion">Galeria de videojuegos</h2>
+
+            <div id="carouselCatalogo" class="carousel slide galeria_carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselCatalogo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+                    <button type="button" data-bs-target="#carouselCatalogo" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+                    <button type="button" data-bs-target="#carouselCatalogo" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
+                    <button type="button" data-bs-target="#carouselCatalogo" data-bs-slide-to="3" aria-label="Diapositiva 4"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../img/Fifa-2026.jpg" class="d-block w-100 galeria_img" alt="Videojuego EA Sports FC 26">
+                        <div class="carousel-caption d-none d-md-block galeria_caption">
+                            <h3 class="subtitulo_seccion">EA Sports FC 26</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/Minecraft.jpg" class="d-block w-100 galeria_img" alt="Videojuego Minecraft">
+                        <div class="carousel-caption d-none d-md-block galeria_caption">
+                            <h3 class="subtitulo_seccion">Minecraft</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/GTA5.jpg" class="d-block w-100 galeria_img" alt="Videojuego Grand Theft Auto V">
+                        <div class="carousel-caption d-none d-md-block galeria_caption">
+                            <h3 class="subtitulo_seccion">Grand Theft Auto V</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/F1_2025.jpg" class="d-block w-100 galeria_img" alt="Videojuego Formula 1 2025">
+                        <div class="carousel-caption d-none d-md-block galeria_caption">
+                            <h3 class="subtitulo_seccion">Formula 1 2025</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCatalogo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselCatalogo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
+
+        <section class="catalogo_grupo">
+
+            <h2 class="titulo_seccion">Videojuegos</h2>
+
+            <p class="grupo_descripcion">
+                Descubri videojuegos de diferentes generos y plataformas. Encontra titulos
+                para disfrutar en solitario, competir con otros jugadores o compartir
+                momentos con amigos y familiares.
+            </p>
+
+
+            <article>
+                <h3 class="subtitulo_seccion">EA Sports FC 26</h3>
+
+                <figure>
+                    <img src="../img/Fifa-2026.jpg" alt="Videojuego EA Sports FC 26">
+                    <figcaption>EA Sports FC 26.</figcaption>
+                </figure>
+
+                <p>
+                    Videojuego de futbol con diferentes modos de juego para disfrutar
+                    de partidos y competencias.
+                </p>
+            </article>
+
+
+            <article>
+                <h3 class="subtitulo_seccion">Minecraft</h3>
+
+                <figure>
+                    <img src="../img/Minecraft.jpg" alt="Videojuego Minecraft">
+                    <figcaption>Minecraft.</figcaption>
+                </figure>
+
+                <p>
+                    Explora mundos infinitos, construi estructuras increibles y sobrevivi
+                    a diferentes desafios en una aventura donde tu creatividad no tiene limites.
+                </p>
+
+</article>
+
+
+            <article>
+                <h3 class="subtitulo_seccion">Grand Theft Auto V</h3>
+
+                <figure>
+                    <img src="../img/GTA5.jpg" alt="Videojuego Grand Theft Auto V">
+                    <figcaption>Grand Theft Auto V.</figcaption>
+                </figure>
+
+                <p>
+                    Vivi una experiencia de mundo abierto en Los Santos, con misiones,
+                    accion, conduccion y una historia protagonizada por tres personajes.
+                </p>
+
+</article>
+
+            <article>
+                <h3 class="subtitulo_seccion">Formula 1 2025</h3>
+
+                <figure>
+                    <img src="../img/F1_2025.jpg" alt="Videojuego Formula 1 2025">
+                    <figcaption>Formula uno 2025.</figcaption>
+                </figure>
+
+                <p>
+                    Experimenta la emocion de la Formula 1 con equipos, pilotos y circuitos
+                    oficiales, compitiendo por alcanzar la gloria en cada carrera.
+                </p>
+
+</article>
+
+            <article>
+                <h3 class="subtitulo_seccion">Formula 1 2024</h3>
+
+                <figure>
+                    <img src="../img/F1_2024.jpg" alt="Videojuego Formula 1 2024">
+                    <figcaption>Formula uno 2024.</figcaption>
+                </figure>
+
+                <p>
+                    Disfruta de la velocidad y la competicion de la Formula 1 con un modo
+                    carrera renovado y una experiencia de conduccion realista.
+                </p>
+
+</article>
+
+            <article>
+                <h3 class="subtitulo_seccion">Red Dead Redemption</h3>
+
+                <figure>
+                    <img src="../img/ReadDeadRedemption.jpg" alt="Videojuego Red Dead Redemption">
+                    <figcaption>Red Dead Redemption.</figcaption>
+                </figure>
+
+                <p>
+                    Acompaña a John Marston en una aventura del Viejo Oeste, llena de accion, exploracion
+                    y decisiones en un mundo abierto.
+                </p>
+
+</article>
+
+            <article>
+                <h3 class="subtitulo_seccion">Red Dead Redemption 2</h3>
+
+                <figure>
+                    <img src="../img/RedDeadRedemption_2.jpg" alt="Videojuego Red Dead Redemption 2">
+                    <figcaption>Red Dead Redemption 2.</figcaption>
+                </figure>
+
+                <p>
+                    Sumergite en el salvaje Oeste junto a Arthur Morgan, en una historia de aventura,
+                    supervivencia y lealtad en un mundo abierto detallado.
+                </p>
+
+</article>
+
+            <article>
+                <h3 class="subtitulo_seccion">Rugby 2025</h3>
+
+                <figure>
+                    <img src="../img/Rugby_2025.jpg" alt="Videojuego Rugby 2025">
+                    <figcaption>Rugby 2025.</figcaption>
+                </figure>
+
+                <p>
+                    Vivi la intensidad del rugby con partidos competitivos, equipos internacionales
+                    y toda la emocion de este deporte en el campo de juego.
+                </p>
+
+</article>
+
+        </section>
+
+
+        <section class="catalogo_grupo catalogo_consolas">
+
+            <h2 class="titulo_seccion">Consolas</h2>
+
+            <p class="grupo_descripcion">
+                Elegi la consola que mejor se adapte a tus preferencias y disfruta
+                de diferentes experiencias de juego en tu plataforma favorita.
+            </p>
+
+
+            <article>
+                <h3 class="subtitulo_seccion">PlayStation 5</h3>
+
+                <figure>
+                    <img src="../img/PS5.jpg" alt="Consola PlayStation 5">
+                    <figcaption>PlayStation 5.</figcaption>
+                </figure>
+
+                <p>
+                    Consola de nueva generacion diseñada para disfrutar de videojuegos
+                    con graficos y experiencias inmersivas.
+                </p>
+            </article>
+
+
+            <article>
+                <h3 class="subtitulo_seccion">Xbox Series X</h3>
+
+                <figure>
+                    <img src="../img/XboxSeriesX.jpg" alt="Consola Xbox Series X">
+                    <figcaption>Xbox Series X.</figcaption>
+                </figure>
+
+                <p>
+                    Consola de alto rendimiento que permite disfrutar de una amplia
+                    variedad de videojuegos.
+                </p>
+            </article>
+
+
+            <article>
+                <h3 class="subtitulo_seccion">Nintendo Switch</h3>
+
+                <figure>
+                    <img src="../img/NintendoSwitch.jpeg" alt="Consola Nintendo Switch">
+                    <figcaption>Nintendo Switch.</figcaption>
+                </figure>
+
+                <p>
+                    Consola versatil que permite jugar tanto en casa como en
+                    modo portatil.
+                </p>
+            </article>
+
+        </section>
+
+
+        <section class="catalogo_grupo">
+
+            <h2 class="titulo_seccion">Accesorios</h2>
+
+            <p class="grupo_descripcion">
+                Complementa tu experiencia gamer con diferentes accesorios diseñados
+                para mejorar la comodidad, el control y la experiencia durante tus partidas.
+            </p>
+
+
+            <article>
+                <h3 class="subtitulo_seccion">Auriculares Gamer</h3>
+
+                <figure>
+                    <img src="../img/Auriculares.jpg" alt="Auriculares gamer">
+                    <figcaption>Auriculares gamer.</figcaption>
+                </figure>
+
+                <p>
+                    Auriculares diseñados para disfrutar de un sonido mas inmersivo
+                    durante tus partidas y sesiones de juego.
+                </p>
+            </article>
+
+
+            <article>
+                <h3 class="subtitulo_seccion">Teclado Gamer</h3>
+
+                <figure>
+                    <img src="../img/TecladoGamer.jpg" alt="Teclado gamer">
+                    <figcaption>Teclado gamer.</figcaption>
+                </figure>
+
+                <p>
+                    Teclado pensado para jugadores que buscan comodidad y precision
+                    durante sus partidas.
+                </p>
+            </article>
+
+
+            <article>
+                <h3 class="subtitulo_seccion">Mouse Gamer</h3>
+
+                <figure>
+                    <img src="../img/Mouse Gamer.jpg" alt="Mouse gamer">
+                    <figcaption>Mouse gamer.</figcaption>
+                </figure>
+
+                <p>
+                    Mouse diseñado para ofrecer precision y control durante diferentes
+                    tipos de videojuegos.
+                </p>
+            </article>
+
+
+            <article>
+                <h3 class="subtitulo_seccion">Control Inalambrico</h3>
+
+                <figure>
+                    <img src="../img/ControlInalambrico.jpg" alt="Control inalambrico para videojuegos">
+                    <figcaption>Control inalambrico.</figcaption>
+                </figure>
+
+                <p>
+                    Control inalambrico para disfrutar de tus videojuegos con mayor
+                    comodidad y libertad de movimiento.
+                </p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FB Game Store. Todos los derechos reservados.</p>
+
+        <div class="footer_content">
+            <h4 class="titulo_redes">Encontranos en</h4>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
